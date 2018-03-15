@@ -15,7 +15,7 @@ class UpdateQuerySet(models.QuerySet):
 	# 	return serialize('json', qs, fields=('user', 'content', 'image'))
 
 	def serialize(self,):
-		list_values = list(self.values('user', 'content', 'image'))
+		list_values = list(self.values('user', 'content', 'image', 'id'))
 		return json.dumps(list_values)
 
 
@@ -38,6 +38,7 @@ class Update(models.Model):
 
 	def serialize(self):
 		data = {
+			"id": self.id,
 			"content": self.content,
 			"user": self.user.id,
 		}

@@ -26,7 +26,7 @@ SECRET_KEY = 'fcp(bbbl8kls00of_89eu#$yit6n5(@hp(b+9a$yxy+idr2g5l'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+#APPEND_SLASH=False
 
 # Application definition
 
